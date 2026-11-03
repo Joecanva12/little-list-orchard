@@ -125,7 +125,8 @@ function RootComponent() {
       <Outlet />
       <footer className="border-t py-6 text-center text-sm text-muted-foreground">
         © {new Date().getFullYear()} Tidy ·{" "}
-        <Link to="/terms" className="underline hover:text-foreground">Terms of Service</Link>
+        <Link to="/terms" className="underline hover:text-foreground">Terms of Service</Link> ·{" "}
+        <Link to="/privacy" className="underline hover:text-foreground">Privacy Policy</Link>
       </footer>
     </QueryClientProvider>
   );
