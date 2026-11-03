@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState, type FormEvent } from "react";
 import type { Session } from "@supabase/supabase-js";
 import { supabase } from "@/integrations/supabase/client";
@@ -80,6 +80,11 @@ function AuthForm() {
       <h2 className="text-lg font-semibold">{mode === "in" ? "Sign in" : "Create account"}</h2>
       <Input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
       <Input type="password" placeholder="Password" minLength={6} value={password} onChange={(e) => setPassword(e.target.value)} required />
+      {mode === "up" && (
+        <p className="text-xs text-muted-foreground">
+          By signing up you agree to our <Link to="/terms" className="underline">Terms of Service</Link>.
+        </p>
+      )}
       {msg && <p className="text-sm text-muted-foreground">{msg}</p>}
       <Button type="submit" className="w-full" disabled={busy}>
         {mode === "in" ? "Sign in" : "Sign up"}

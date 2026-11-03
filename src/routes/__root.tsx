@@ -123,6 +123,10 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
+      <footer className="border-t py-6 text-center text-sm text-muted-foreground">
+        © {new Date().getFullYear()} Tidy ·{" "}
+        <Link to="/terms" className="underline hover:text-foreground">Terms of Service</Link>
+      </footer>
     </QueryClientProvider>
   );
 }
