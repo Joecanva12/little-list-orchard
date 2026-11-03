@@ -11,13 +11,14 @@ const readNonce = createIsomorphicFn()
 
 export const getRouter = () => {
   const queryClient = new QueryClient();
+  const nonce = readNonce();
 
   const router = createRouter({
     routeTree,
     context: { queryClient },
     scrollRestoration: true,
     defaultPreloadStaleTime: 0,
-    ssr: { nonce: readNonce() },
+    ...(nonce ? { ssr: { nonce } } : {}),
   });
 
   return router;
