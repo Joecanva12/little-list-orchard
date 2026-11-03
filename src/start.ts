@@ -28,7 +28,7 @@ const csrfMiddleware = createCsrfMiddleware({
 // Lovable's editor embeds the preview in an iframe, so it is allowed as a frame ancestor;
 // every other site is blocked from embedding the app.
 const FRAME_ANCESTORS = "'self' https://lovable.dev https://*.lovable.dev https://*.lovable.app";
-const CSP_MODE: "report-only" | "enforce" = "enforce";
+const CSP_MODE = "enforce" as "report-only" | "enforce";
 const CSP = [
   "default-src 'self'",
   "script-src 'self' 'unsafe-inline'",
