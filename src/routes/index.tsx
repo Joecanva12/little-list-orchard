@@ -82,7 +82,8 @@ function AuthForm() {
       <Input type="password" placeholder="Password" minLength={6} value={password} onChange={(e) => setPassword(e.target.value)} required />
       {mode === "up" && (
         <p className="text-xs text-muted-foreground">
-          By signing up you agree to our <Link to="/terms" className="underline">Terms of Service</Link>.
+          By signing up you agree to our <Link to="/terms" className="underline">Terms of Service</Link> and{" "}
+          <Link to="/privacy" className="underline">Privacy Policy</Link>.
         </p>
       )}
       {msg && <p className="text-sm text-muted-foreground">{msg}</p>}
