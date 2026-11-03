@@ -1,0 +1,4 @@
+Contact: mailto:security@todolist.co
+Expires: 2027-11-03T19:14:00.000Z
+Preferred-Languages: en
+Canonical: https://little-list-orchard.lovable.app/.well-known/security.txt

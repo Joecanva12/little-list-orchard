@@ -12,3 +12,5 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://little-list-orchard.lovable.app/sitemap.xml
